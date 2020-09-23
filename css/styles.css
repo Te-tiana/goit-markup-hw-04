@@ -9,6 +9,7 @@
     --address-link: rgba(255, 255, 255, 0.6);
     --header-border:  #ECECEC;
     --border-item: #EEEEEE;
+    --overlay-bg-color: #C4C4C4;
     }
 
 body {
@@ -34,6 +35,15 @@ img {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.overlay {
+max-width: 1600px;
+/* max-height: 600px; */
+background-color: var(--overlay-bg-color);
+background-image:
+/* rgba(47, 48, 58, 0.4); */
+ url();
 }
 
 .visually-hidden {
@@ -90,12 +100,14 @@ img {
 .section,
 .hero,
 .section.team,
+.section-projects,
 .footer {
 margin-top: 0;
 margin-bottom: 0;
 }
 
 .section,
+.section-projects,
 .section.team {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -126,7 +138,7 @@ color: var(--logo-black-color);
 }
     
 /* Навигация */
-.site-nav li,
+.site-nav a,
 .contact-link {
     display: block;
     padding-top: 32px;
@@ -135,7 +147,9 @@ color: var(--logo-black-color);
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
+}
 
+.site-nav .link {
     color: var(--title-text-color);
 }
 
@@ -178,7 +192,7 @@ color: var(--logo-black-color);
 /* Герой */
 .hero {
     text-align: center;
-    background-color: var(--black-background-color);
+    /* background-color: var(--black-background-color); */
     padding-bottom: 200px;
     padding-top: 200px;
     
@@ -213,7 +227,6 @@ color: var(--primary-white-color);
 .feature-list .title {
     line-height: 1.4;
     text-transform: uppercase;
-
 }
 
 .feature-list p {
@@ -255,16 +268,12 @@ color: var(--primary-white-color);
 
 /* Наши проекты */
 .section-projects .title,
-.section.team h2 {
+.section.team h2,
+.section-clients h2 {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     
-}
-
-.section-projects {
-    margin-top: 130px;
-    margin-bottom: 0;
 }
 
 .section-projects .title {
@@ -314,10 +323,19 @@ color: var(--primary-white-color);
     background-color: var(--primary-white-color);
 }
 
-.list-team {
+.section.team .item {
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.list-team,
+.list-social {
     display: flex;
 
 }
+
+/* Our Clients */
+
 
 /* Portfolio Section */
 .container.filter-list {
@@ -469,6 +487,18 @@ background-color:var(--accent-color);
 }
 
 .about-us {
-    margin-right: auto; 
+    margin-right: 70px; 
     width: 231px;
 }
+
+.footer .container {
+    display: flex;
+    align-items: baseline;
+}
+
+.sign-up {
+line-height: 16px;
+text-transform: uppercase;
+
+color: var(--primary-white-color);
+} 

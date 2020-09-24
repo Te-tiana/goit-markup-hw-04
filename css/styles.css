@@ -227,6 +227,7 @@ color: var(--primary-white-color);
 .feature-list .title {
     line-height: 1.4;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .feature-list p {
@@ -248,6 +249,35 @@ color: var(--primary-white-color);
 
 .item:not(:last-child) {
     margin-right: 30px;
+}
+
+.feature-list .item::before {
+    display: flex;
+    content: "";
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 0;
+    background-color: var(--secondary-bg-color);
+}
+
+.icon-antenna::before {
+ background-image: url("../images/icons-feature/antenna.svg");
+}
+
+.icon-clock::before {
+ background-image: url("../images/icons-feature/clock.svg");
+}
+
+.icon-diagram::before {
+ background-image: url("../images/icons-feature/diagram.svg");
+}
+
+.icon-astranaut::before {
+ background-image: url("../images/icons-feature/astronaut.svg");
 }
 
 .title {
@@ -394,6 +424,11 @@ margin-bottom: 0;
 
 }
 
+.portfolio-list .item:hover {
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+
 /* Button */
 .button {
     display: flex;
@@ -441,6 +476,9 @@ background-color:var(--accent-color);
     background-color: var(--accent-color);
 }
 
+.filter .button:hover {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 
 /* Footer */
 .footer {

@@ -37,15 +37,6 @@ img {
     padding-right: 15px;
 }
 
-.overlay {
-max-width: 1600px;
-/* max-height: 600px; */
-background-color: var(--overlay-bg-color);
-background-image:
-/* rgba(47, 48, 58, 0.4); */
- url();
-}
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -102,8 +93,7 @@ background-image:
 .section.team,
 .section-projects,
 .footer {
-margin-top: 0;
-margin-bottom: 0;
+margin: 0;
 }
 
 .section,
@@ -192,10 +182,15 @@ color: var(--logo-black-color);
 /* Герой */
 .hero {
     text-align: center;
-    /* background-color: var(--black-background-color); */
+    /* background-color: var(--overlay-bg-color); */
     padding-bottom: 200px;
     padding-top: 200px;
-    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1600px;
+/* max-height: 600px; */
+    background: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4), url("../images/hero1.jpg")), var(--overlay-bg-color);
 }
 
 .hero-title {

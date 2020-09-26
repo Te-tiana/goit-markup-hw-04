@@ -57,6 +57,7 @@ img {
 .list-projects,
 .list-team,
 .social-list,
+.list.clients,
 .filter,
 .portfolio-list {
     list-style: none;
@@ -101,7 +102,8 @@ margin: 0;
 
 .section,
 .section-projects,
-.section.team {
+.section.team,
+.section-clients {
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -423,7 +425,37 @@ margin-right: 10px;
 }
 
 /* Our Clients */
+.section-clients .title {
+    margin-bottom: 50px;
+    margin-top: 0;
+}
 
+.list.clients {
+    display: flex;
+    justify-content: space-between;
+}
+
+.client-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 90px;
+    border: 1px solid var(--social-list-color);
+    border-radius: 4px;
+}
+
+.client-logo .icon {
+    fill: var(--social-list-color);
+}
+
+a > .client-logo:hover {
+    border-color: var(--accent-color);
+   }
+
+.client-logo:hover .icon { 
+    fill: var(--accent-color);
+}
 
 /* Portfolio Section */
 .container.filter-list {
@@ -594,8 +626,22 @@ background-color:var(--accent-color);
 }
 
 .sign-up {
+margin-bottom: 20px;
 line-height: 16px;
 text-transform: uppercase;
 
 color: var(--primary-white-color);
 } 
+
+.footer .social-list > li {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.general-links li:not(:last-child) {
+margin-right: 10px;
+}
+
+.general-links .icon {
+    fill: var(--primary-white-color);
+}
